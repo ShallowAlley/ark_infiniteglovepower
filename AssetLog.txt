@@ -1,0 +1,26 @@
+**************************************************
+--开始检查项目资源
+--项目路径:C:\Users\admin\AppData\MetaApp\Editor_Win64\MetaWorldSaved\Saved\MetaWorld\Project\Edit\infi
+**************************************************
+**************************************************
+--项目资源检查结束，耗时:9.266
+**************************************************
+-------------------------------------------
+--需要修改的脚本[.ts文件]：6
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21632 ]确定这是资源？可替换=>[ 197462 ]
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21619 ]确定这是资源？可替换=>[ 197467 ]
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21629 ]确定这是资源？可替换=>[ 197464 ]
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21642 ]确定这是资源？可替换=>[ 197469 ]
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21644 ]确定这是资源？可替换=>[ 197470 ]
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/JavaScripts/config/GemSkill.ts]使用到ID[ 21653 ]确定这是资源？可替换=>[ 197460 ]
+=>请修改上述ts文件，如果提示ID不是资源请忽略
+=>如果是配置文件转换的ts文件，请修改对应的配置表
+-------------------------------------------
+-------------------------------------------
+--需要修改的材质：1
+[C:/Users/admin/AppData/MetaApp/Editor_Win64/MetaWorldSaved/Saved/MetaWorld/Project/Edit/infi/Materials/E6CB450A4F855F1A302B3F9A94C275A2.mat]使用到ID[ 99155 ]请查找替换
+=>请修改上述提示的材质文件
+-------------------------------------------
+=>资源替换40个
+=>还有7个目标需要处理
+=========================================================

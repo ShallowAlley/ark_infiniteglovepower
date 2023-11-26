@@ -1,0 +1,4 @@
+{
+	"CustomType": "shape",
+	"CustomData": "{\"realData\":\"[{\\\"apiName\\\":\\\"changeCharacter\\\",\\\"value\\\":\\\"Lowpoly_Adult_Male\\\",\\\"saveFileType\\\":\\\"Character\\\"},{\\\"apiName\\\":\\\"setSkinColor\\\",\\\"value\\\":\\\"R=0.532575,G=0.295593,B=0.557292,A=1\\\",\\\"saveFileType\\\":\\\"Character\\\"},{\\\"apiName\\\":\\\"setHeadMesh\\\",\\\"value\\\":\\\"60746\\\",\\\"saveFileType\\\":\\\"Character\\\"},{\\\"apiName\\\":\\\"setCharacterHeight\\\",\\\"value\\\":\\\"0.5\\\",\\\"saveFileType\\\":\\\"Character\\\"}]\",\"characterType\":\"Lowpoly_Adult_Male\",\"basicStance\":\"73803\",\"version\":\"2.0\"}"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "testgame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "module_gm": "^4.1.2",
+    "odin": "^4.0.6"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.appshahe.com/metaApp/metagame/metabluets/games/infiniteglovepower.git"
+  }
+}
