@@ -1,4 +1,3 @@
-import { oTraceError, oTrace, oTraceWarning, LogManager, AnalyticsUtil, IFightRole, AIMachine, AIState } from "odin";
 import LevelModuleC from "../modules/level/module/LevelModuleC";
 import { SkillModule_C } from "../modules/skill/SkillModule_C";
 import SkillPanelUI from "./SkillPanelUI";

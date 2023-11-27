@@ -1,9 +1,4 @@
 
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.25-10.27.20
- */
-
 import { SkillType } from ".././modules/skill/SkillDataHelper";
 import SkillGetUI_Generate from ".././ui-generate/SkillGetUI_generate";
 

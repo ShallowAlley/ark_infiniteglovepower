@@ -1,13 +1,4 @@
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 幸好时光与你同在
- * UI: UI/gm/GMItem.ui
- * TIME: 2022.10.27-15.31.57
- */
-
- 
 
  @UIBind('UI/gm/GMItem.ui')
  export default class GMItem_Generate extends mw.UIScript {

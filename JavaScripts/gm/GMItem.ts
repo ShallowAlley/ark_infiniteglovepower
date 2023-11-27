@@ -1,9 +1,3 @@
-
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.27-15.31.57
- */
-
 import GMItem_Generate from "../ui-generate/gm/GMItem_generate";
 
 export default class GMItem extends GMItem_Generate {

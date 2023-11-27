@@ -1,12 +1,4 @@
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 幸好时光与你同在
- * UI: UI/SkillPanelUI.ui
- * TIME: 2022.10.25-13.49.49
- */
-
  
 
  @UIBind('UI/SkillPanelUI.ui')

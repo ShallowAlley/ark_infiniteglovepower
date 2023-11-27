@@ -1,9 +1,3 @@
-
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.25-10.27.19
- */
-
 import RewardsUI from "./RewardsUI";
 import EndUI_WIN_Generate from ".././ui-generate/EndUI_WIN_generate";
 import { EndData } from ".././ui/EndUILose";

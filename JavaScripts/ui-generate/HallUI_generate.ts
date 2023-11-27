@@ -1,12 +1,4 @@
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 幸好时光与你同在
- * UI: UI/HallUI.ui
- * TIME: 2022.10.25-13.17.58
- */
-
  
 
  @UIBind('UI/HallUI.ui')

@@ -1,9 +1,3 @@
-
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.27-15.56.52
- */
-
  import GMHUD_Generate from "../ui-generate/gm/GMHUD_generate";
 
  export default class GMHUD extends GMHUD_Generate {

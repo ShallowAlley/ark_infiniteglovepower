@@ -1,8 +1,4 @@
 
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.25-10.27.20
- */
 
 import SoulUI_Generate from "../ui-generate/SoulUI_generate";
 import { SoundConfigID, SoundPlay } from "../utils/SoundPlay";

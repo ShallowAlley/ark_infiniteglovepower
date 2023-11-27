@@ -1,16 +1,7 @@
-
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.25-10.27.19
- */
-
-import { oTraceError, oTrace, oTraceWarning, LogManager, AnalyticsUtil, IFightRole, AIMachine, AIState } from "odin";
 import { GameConfig } from ".././config/GameConfig";
-import { SkillType } from ".././modules/skill/SkillDataHelper";
 import { SkillModule_C } from ".././modules/skill/SkillModule_C";
 import RewardsUI_Generate from ".././ui-generate/RewardsUI_generate";
 import { EndData } from ".././ui/EndUILose";
-import { MsgReport } from ".././utils/MsgReporter";
 import { SoundConfigID, SoundPlay } from ".././utils/SoundPlay";
 import SkillPanelUI from "./SkillPanelUI";
 
@@ -36,9 +27,6 @@ export default class RewardsUI extends RewardsUI_Generate {
 						this.nowChoseIndex = 1;
 					}
 					ModuleService.getModule(SkillModule_C).net_SkillPointGet(this.nowSendRewards[this.nowChoseIndex - 1], 1);
-					// to do 埋点
-					let skillType = this.nowSendRewards[this.nowChoseIndex - 1] as SkillType;
-					this.sendMsg(skillType);
 				}
 				this.showContinue = true;
 				this.playAni(false, null);
@@ -48,15 +36,12 @@ export default class RewardsUI extends RewardsUI_Generate {
 		////奖励按钮点击
 		this.mbtn_skill1.onClicked.add(() => {
 			this.changeChoseSkill(1);
-			this.sendMsgSkillClick();
 		});
 		this.mbtn_skill2.onClicked.add(() => {
 			this.changeChoseSkill(2);
-			this.sendMsgSkillClick();
 		});
 		this.mbtn_skill3.onClicked.add(() => {
 			this.changeChoseSkill(3);
-			this.sendMsgSkillClick();
 		});
 	}
 	changeChoseSkill(skillIndex: number) {
@@ -178,37 +163,7 @@ export default class RewardsUI extends RewardsUI_Generate {
 		mw.UIService.hide(RewardsUI);
 	}
 
-	/**
-	 * 埋点
-	 */
-	sendMsg(type: SkillType) {
-		let msg = AnalyticsUtil.get(MsgReport.ts_action_click);
-		switch (type) {
-			case SkillType.Power:
-				msg.data.button = "gem_1";
-				break;
-			case SkillType.Space:
-				msg.data.button = "gem_2";
-				break;
-			case SkillType.Reality:
-				msg.data.button = "gem_3";
-				break;
-			case SkillType.Time:
-				msg.data.button = "gem_4";
-				break;
-			case SkillType.Heart:
-				msg.data.button = "gem_5";
-				break;
-			default:
-				return;
-		}
-		msg.send();
-	}
-	sendMsgSkillClick() {
-		let msg = AnalyticsUtil.get(MsgReport.ts_action_click);
-		msg.data.button = "skill";
-		msg.send();
-	}
+
 	/**
 	 * 设置不显示时触发
 	 */

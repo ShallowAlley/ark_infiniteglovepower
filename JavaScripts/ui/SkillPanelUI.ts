@@ -3,7 +3,6 @@ import LevelModuleC from ".././modules/level/module/LevelModuleC";
 import { SkillType } from ".././modules/skill/SkillDataHelper";
 import { SkillModule_C } from ".././modules/skill/SkillModule_C";
 import SkillPanelUI_Generate from ".././ui-generate/SkillPanelUI_generate";
-import { MsgReport } from ".././utils/MsgReporter";
 import { SoundConfigID, SoundPlay } from ".././utils/SoundPlay";
 
 export default class SkillPanelUI extends SkillPanelUI_Generate {

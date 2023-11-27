@@ -1,13 +1,4 @@
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 幸好时光与你同在
- * UI: UI/EnterLoading.ui
- * TIME: 2022.10.25-13.17.58
- */
-
- 
 
  @UIBind('UI/EnterLoading.ui')
  export default class EnterLoading_Generate extends mw.UIScript {

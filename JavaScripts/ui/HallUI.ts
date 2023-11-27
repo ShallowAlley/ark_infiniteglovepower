@@ -4,7 +4,6 @@ import { SkillType } from ".././modules/skill/SkillDataHelper";
 import { SkillModule_C } from ".././modules/skill/SkillModule_C";
 import SkillGetUI from "./SkillGetUI";
 import HallUI_Generate from ".././ui-generate/HallUI_generate";
-import { MsgReport } from ".././utils/MsgReporter";
 import { SoundConfigID, SoundPlay } from ".././utils/SoundPlay";
 import Tools from ".././utils/Tools";
 

@@ -1,9 +1,4 @@
 
-/** 
- * AUTHOR: 幸好时光与你同在
- * TIME: 2022.10.25-10.27.19
- */
-
 import { GameConfig } from ".././config/GameConfig";
 import { C2CEvent } from ".././consts/ProLoadGuid";
 import EnterLoading_Generate from ".././ui-generate/EnterLoading_generate";

@@ -1,7 +1,6 @@
 import { SpawnManager, SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
 import { PlayerManagerExtesion, } from '../../Modified027Editor/ModifiedPlayer';
 import { C2CEvent, consts, ProLoadGuid } from "../../consts/ProLoadGuid";
-import { MsgReport } from "../../utils/MsgReporter";
 import { SoundConfigID, SoundPlay } from "../../utils/SoundPlay";
 import LevelModuleC from "../level/module/LevelModuleC";
 import { SkillModule_C } from "../skill/SkillModule_C";

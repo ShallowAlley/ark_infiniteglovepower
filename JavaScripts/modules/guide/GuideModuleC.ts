@@ -1,12 +1,3 @@
-/*
- * @Author: hanling.wang hanling.wang@appshahe.com
- * @Date: 2022-11-22 14:25:58
- * @LastEditors: hanling.wang hanling.wang@appshahe.com
- * @LastEditTime: 2022-11-22 18:47:17
- * @FilePath: \infiniteglovepower\JavaScripts\modules\guide\GuideModuleC.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
-import { oTraceError, oTrace, oTraceWarning, LogManager, AnalyticsUtil, IFightRole, AIMachine, AIState } from "odin";
 import { GameConfig } from "../../config/GameConfig";
 import HallUI from "../../ui/HallUI";
 import { SoundPlay } from "../../utils/SoundPlay";

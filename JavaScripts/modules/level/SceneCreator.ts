@@ -1,10 +1,9 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { SpawnManager,SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
-import { oTraceError, oTrace, oTraceWarning, LogManager, AnalyticsUtil, IFightRole, AIMachine, AIState } from "odin";
+
 import { GameConfig } from "../../config/GameConfig";
 import { C2CEvent, ProLoadGuid } from "../../consts/ProLoadGuid";
 import EnterLoading from "../../ui/EnterLoading";
-import { MsgReport } from "../../utils/MsgReporter";
 import Tools from "../../utils/Tools";
 import GuideModuleC from "../guide/GuideModuleC";
 import { PlayerModuleC } from "../player/PlayerModuleC";
