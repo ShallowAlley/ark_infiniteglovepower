@@ -1,11 +1,3 @@
-/*
- * @Author       : Shuai.Wang
- * @Date         : 2022-10-12 15:48:43
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-10-20 15:57:03
- * @FilePath: \infiniteglovepower\Prefabs\Common\Script\TrapUtil.ts
- * @Description  : 机关相关的Util类，缩放物体、获取所有子节点
- */
 export class TrapUtil {
 
     /**

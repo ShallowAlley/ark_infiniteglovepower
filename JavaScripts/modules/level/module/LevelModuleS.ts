@@ -26,7 +26,6 @@ export default class LevelModuleS extends ModuleS<LevelModuleC, LevelDataHelper>
     net_saveLevel(level: number, player: mw.Player) {
         const p = player!;
         const pData = this.getPlayerData(p);
-        console.log('ssssssss', pData);
 
         if (pData.getLevel() < level) {
             pData.saveLevel(level);

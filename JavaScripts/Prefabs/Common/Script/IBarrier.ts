@@ -1,11 +1,3 @@
-/*
- * @Author       : Shuai.Wang
- * @Date         : 2022-10-12 15:38:21
- * @LastEditors  : Shuai.Wang
- * @LastEditTime : 2022-10-12 16:33:46
- * @FilePath     : \infiniteglovepower\Prefabs\Common\Script\IBarrier.ts
- * @Description  : 机关的基础行为接口
- */
 export interface IBarrier {
     /**恢复 */
     resetPrefab: () => void;

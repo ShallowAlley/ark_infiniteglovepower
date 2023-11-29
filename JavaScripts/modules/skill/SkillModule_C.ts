@@ -298,6 +298,7 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
         Event.dispatchToLocal(C2CEvent.GETSKILLGEM, SkillType.Soul, func);
     }
     powerTrigger = (obj: mw.GameObject) => {
+        if(obj){
         if (obj.tag && obj.tag.includes(consts.officeTag)) {
             // obj.visibility=(mw.PropertyStatus.Off);
             let objName = (obj as mw.GameObject).name;
@@ -311,6 +312,7 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
             Event.dispatchToLocal(C2CEvent.DESTORY_OFFICE, obj.tag, objName);
             SoundPlay.ins.play(SoundConfigID.BALL_AND_BARRIER);
         }
+    }
     }
 
     onUpdate(dt: number): void {

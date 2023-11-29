@@ -137,7 +137,6 @@ export default class SceneCreator {
     private createBarrier() {
         mw.UIService.show(EnterLoading);
         // mw.instance.showPanel(EnterLoading);
-        // 埋点
         let moduleC = ModuleService.getModule(LevelModuleC);
 
         if (moduleC.getCurrentSceneLv() == 1 && moduleC.getIfNewEnter()) {

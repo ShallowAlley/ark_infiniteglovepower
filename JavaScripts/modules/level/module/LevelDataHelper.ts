@@ -58,7 +58,7 @@ export class LevelDataHelper extends Subdata {
      * @param gameCoefficient 当前关卡的参数系数 
      */
     saveLevelInfo(level: number, barrierInfo: BarrierInfo[], pos: number[], gameCoefficient: GameCoefficient) {
-        this.oldLevel = level;
+        this.oldLevel = level-1;
         this.barrierInfo = barrierInfo;
         this.startPos = pos;
         this.gameCoefficient = gameCoefficient;

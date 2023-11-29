@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-
-'''
-Author       : ougato
-Date         : 2022-01-07 19:00:20
-LastEditors: your name
-LastEditTime: 2022-03-10 19:12:21
-FilePath: \nonstop\.vscode\InterfaceExport.py
-Description  : 
-'''
 
 import json
 import os
