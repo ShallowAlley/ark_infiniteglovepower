@@ -1,5 +1,5 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
-import { SpawnManager,SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
+import { SpawnManager, SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
 import { GameConfig } from "../../config/GameConfig";
 import { C2CEvent, consts, ProLoadGuid, ProLoadGuid_SceneGuid } from "../../consts/ProLoadGuid";
 import SkillPanelUI from "../../ui/SkillPanelUI";
@@ -193,7 +193,7 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
     setPowerBall(lv) {
         let player = Player.localPlayer;
 
-        let ancher = SpawnManager.wornSpawn(ProLoadGuid.anchor) as any;//SpawnManager.modifyPoolSpawn(ProLoadGuid.anchor) as mw.Anchor;
+        let ancher = SpawnManager.wornSpawn(ProLoadGuid.anchor) as mw.GameObject;//SpawnManager.modifyPoolSpawn(ProLoadGuid.anchor) as mw.Anchor;
         ancher.worldTransform.position = (player.character.worldTransform.position);// = player.character.worldTransform.position;
         this.powerBallAncher = ancher;
         let num = GameConfig.GemSkill.getElement(1).skillValue[lv - 1];
@@ -324,17 +324,17 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
      * 播放技能特效
      * @param type 
      */
-    private playEffectAtPlayer(type: number) {
+    private async playEffectAtPlayer(type: number) {
         const cfg = GameConfig.GemSkill.getElement(type + 1);
         if (cfg) {
-            const effect = SpawnManager.modifyPoolSpawn(cfg.effect) as mw.Effect;
-            const char = Player.localPlayer.character;
-            effect.worldTransform.position = char.worldTransform.position;
-            setTimeout(() => {
+            const playId = EffectService.playAtPosition(cfg.effect, Player.localPlayer.character.worldTransform.position, { loopCount: 0});
+            //const effect = SpawnManager.modifyPoolAsyncSpawn(cfg.effect) as Effect;
+            EffectService.getEffectById(playId).then((effect) => {
+            setTimeout(async () => {
                 effect.play();
                 // char.detac (effect);
                 let worldScale = 1;
-                const inter = setInterval(() => {
+                const inter = setInterval(async () => {
                     worldScale += 0.2;
                     if (worldScale >= 5) {// 扩大10倍
                         clearInterval(inter);
@@ -346,10 +346,12 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
                     effect.worldTransform.scale = (new mw.Vector(worldScale));// = ;
                 }, 50);
             }, 100);
-
+        });
         } else {
             throw new Error("skill type error,not find cfg");
         }
+
     }
+
 
 }

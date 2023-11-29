@@ -1,5 +1,5 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
-import { SpawnManager,SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
+import { SpawnManager, SpawnInfo, } from '../../Modified027Editor/ModifiedSpawn';
 
 import { GameConfig } from "../../config/GameConfig";
 import { C2CEvent, ProLoadGuid } from "../../consts/ProLoadGuid";
@@ -146,7 +146,7 @@ export default class SceneCreator {
         // 先保存数据
         ModuleService.getModule(PlayerModuleC).net_PlayerMovePosition(this.startPos);
         this.module.sendLevelData(this.allBarriers, [this.startPos.x, this.startPos.y, this.startPos.z], this.gameCoefficient);
-        const inter = setInterval(() => {
+        const inter = setInterval(async () => {
             const info = this.allBarriers.pop();
             if (!info) {// 加载完了
                 Event.dispatchToLocal(C2CEvent.SCENE_FINISH);
@@ -159,9 +159,10 @@ export default class SceneCreator {
 
             const cfg = GameConfig.Obstacle.getElement(info.prefabID);
             const guid = cfg.guid;
-            const mwGO = SpawnManager.modifyPoolSpawn(guid);
-            mwGO.worldTransform.position = (Tools.convertArrToVec(info.prefabLoc) as mw.Vector);
-            mwGO.asyncReady().then(go => {
+            const mwGO = SpawnManager.modifyPoolAsyncSpawn(guid);
+            (await mwGO).worldTransform.position = (Tools.convertArrToVec(info.prefabLoc) as mw.Vector);
+
+            (await mwGO).asyncReady().then(go => {
                 const scripts = go.getScripts();
                 if (!scripts || scripts.length <= 0) return;
 
@@ -184,7 +185,7 @@ export default class SceneCreator {
             });
 
             if (info.prefabID === SOUL_SKILL_DOOR) {// 隐藏特殊的灵魂门
-                this.soulDoor = mwGO;
+                this.soulDoor = await mwGO;
                 this.soulDoor.setVisibility(mw.PropertyStatus.Off, true);
             }
         }, 100);

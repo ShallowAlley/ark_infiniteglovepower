@@ -55,8 +55,8 @@ export class ProLoadGuid {
 	static readonly materialChange = "94240";
 	// 底座材质
 	private materialCube = "100234";
-	static readonly worldUI = "16037";
-	static readonly Trigger = "113";
+	static readonly worldUI = "UIWidget";
+	static readonly Trigger = "Trigger";
 	static readonly playerPre = "21581";
 	static readonly playerPreV = "31969";
 	static readonly anchor = "25782";

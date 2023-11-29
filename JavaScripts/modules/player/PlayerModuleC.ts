@@ -35,9 +35,11 @@ export class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerDataHelper> {
 	}
 	/**初始化玩家身上的触发器 */
 	initPlayerTrigger() {
+		console.log("initPlayerTrigger");
 		let player = Player.localPlayer;
 		Camera.currentCamera.springArm.collisionEnabled = false;
 		player.character.asyncReady().then(() => {
+			console.log("player.character.asyncReady()  ok");
 			SpawnManager.wornAsyncSpawn(ProLoadGuid.Trigger).then((obj: mw.Trigger) => {
 				obj.parent = (player.character);
 				this.deadTrigger = obj;
