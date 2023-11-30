@@ -326,17 +326,17 @@ export class SkillModule_C extends ModuleC<SkillModule_S, SkillDataHelper>{
      * 播放技能特效
      * @param type 
      */
-    private async playEffectAtPlayer(type: number) {
+    private  playEffectAtPlayer(type: number) {
         const cfg = GameConfig.GemSkill.getElement(type + 1);
         if (cfg) {
             const playId = EffectService.playAtPosition(cfg.effect, Player.localPlayer.character.worldTransform.position, { loopCount: 0});
             //const effect = SpawnManager.modifyPoolAsyncSpawn(cfg.effect) as Effect;
             EffectService.getEffectById(playId).then((effect) => {
-            setTimeout(async () => {
+            setTimeout( () => {
                 effect.play();
                 // char.detac (effect);
                 let worldScale = 1;
-                const inter = setInterval(async () => {
+                const inter = setInterval( () => {
                     worldScale += 0.2;
                     if (worldScale >= 5) {// 扩大10倍
                         clearInterval(inter);
